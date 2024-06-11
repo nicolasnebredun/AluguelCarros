@@ -1,7 +1,7 @@
 <?php
 $servidor = "localhost";
 $usuario = "root";
-$senha = "";
+$senha = "root";
 $dbname = "alucar";
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $dbname);

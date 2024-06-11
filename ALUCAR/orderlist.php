@@ -26,7 +26,7 @@ require 'conexao.php';
       <ul>
         <li><a href="http://">Home</a></li>
         <li>
-          <a href="">refresh</a>
+          <a href="">Atualizar</a>
         </li>
         <li><a href="http://">Car List</a></li>
         <li>
@@ -38,24 +38,24 @@ require 'conexao.php';
           </ul>
         </li>
         <li><a href="index.html">Sair</a></li>
-      </ul>  
+      </ul>
   </nav>
   <div id="searchContainer">
-  <form method="GET" action="">
-                    <select class="filtro" name="plataforma" id="plataforma" required>
-                        <option value="">Selecione o Tipo de Procura</option>
-                        <option value="ID">ID</option>
-                        <option value="Nome">Nome</option>
-                        <option value="CPF">CPF</option>
-                    </select>
-                    <input type="text" id="query" name="query" placeholder="Digite o texto para buscar" required>
-                    <button type="submit" class="botao_busca">Buscar</button>
-                </form>
-      </div>
-    </div>
+    <form method="GET" action="">
+      <select class="filtro" name="plataforma" id="plataforma" required>
+        <option value="">Selecione o Tipo de Procura</option>
+        <option value="ID">ID</option>
+        <option value="Nome">Nome</option>
+        <option value="CPF">CPF</option>
+      </select>
+      <input type="text" id="query" name="query" placeholder="Digite o texto para buscar" required>
+      <button type="submit" class="botao_busca">Buscar</button>
+    </form>
+  </div>
+  </div>
   <table class="greenTable">
     <thead>
-      
+
       <tr>
         <th>ID</th>
         <th>Nome</th>
@@ -72,20 +72,20 @@ require 'conexao.php';
     </thead>
     <tbody>
       <?php
-        
-        if (isset($_GET['plataforma']) && isset($_GET['query']) && !empty($_GET['plataforma']) && !empty($_GET['query'])) {
-          $conexao = mysqli_connect("localhost", "root", "", "alucar");
 
-          if (!$conexao) {
-              die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
-          }
+      if (isset($_GET['plataforma']) && isset($_GET['query']) && !empty($_GET['plataforma']) && !empty($_GET['query'])) {
+        $conexao = mysqli_connect("localhost", "root", "root", "alucar");
 
-          $plataforma = mysqli_real_escape_string($conexao, $_GET['plataforma']);
-          $query = mysqli_real_escape_string($conexao, $_GET['query']);
-          $consulta = "SELECT * FROM aluguel WHERE $plataforma LIKE '%$query%'";
-          $consulta2 = "SELECT * FROM aluguel WHERE $plataforma LIKE '%$query%'";
-          $executaConsulta = mysqli_query($conexao, $consulta);
-          $executaConsulta2 = mysqli_query($conexao, $consulta2);
+        if (!$conexao) {
+          die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
+        }
+
+        $plataforma = mysqli_real_escape_string($conexao, $_GET['plataforma']);
+        $query = mysqli_real_escape_string($conexao, $_GET['query']);
+        $consulta = "SELECT * FROM aluguel WHERE $plataforma LIKE '%$query%'";
+        $consulta2 = "SELECT * FROM aluguel WHERE $plataforma LIKE '%$query%'";
+        $executaConsulta = mysqli_query($conexao, $consulta);
+        $executaConsulta2 = mysqli_query($conexao, $consulta2);
 
         if (mysqli_num_rows($executaConsulta) > 0) {
           foreach ($executaConsulta as $alugueis) {
@@ -103,14 +103,13 @@ require 'conexao.php';
                             <td><a class='botao' href='update.php?id={$alugueis['ID']}'>Alterar</a></td>
                         </tr>";
           }
-        
-        } elseif  (mysqli_num_rows($executaConsulta2) != 1) {
-          
-            // Consulta $executaConsulta retornou zero linhas, mostrando todos os dados do banco
-            echo "<tr><td colspan='65'>Nenhum resultado encontrado, Tente novamente realizar a Pesquisa!</td></tr>";
-            
-            foreach ($executaConsulta2 as $alugueis2) {
-                echo "<tr>
+        } elseif (mysqli_num_rows($executaConsulta2) != 1) {
+
+          // Consulta $executaConsulta retornou zero linhas, mostrando todos os dados do banco
+          echo "<tr><td colspan='65'>Nenhum resultado encontrado, Tente novamente realizar a Pesquisa!</td></tr>";
+
+          foreach ($executaConsulta2 as $alugueis2) {
+            echo "<tr>
                         <td>{$alugueis2['ID']}</td>
                         <td>{$alugueis2['Nome']}</td>
                         <td>{$alugueis2['CPF']}</td>
@@ -125,7 +124,6 @@ require 'conexao.php';
 
                       </tr>";
           }
-          
         }
         mysqli_close($conexao);
       }
