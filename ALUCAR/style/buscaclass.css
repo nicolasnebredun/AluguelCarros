@@ -1,0 +1,89 @@
+#searchContainer {
+    background-color: #E0EEEE;
+    border: solid 2px #5F9EA0;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: -64px;
+    /* Ajuste a margem superior conforme necessário */
+    width: 370px;
+    height: 50px;
+    
+    align-items: center;
+    justify-content: center;
+    /* Centraliza horizontalmente o conteúdo */
+    padding: 5px;
+    
+}
+form {
+    display: inline-block;
+
+}
+
+#searchContainer input[type="text"] {
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px 0 0 5px;
+    border: solid 1px #ccc;
+    margin-top: -1px;
+    /* Remove o espaço entre a borda do input e do botão */
+    
+}
+#searchContainer select   {
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px 0 0 5px;
+    border: solid 1px #ccc;
+    margin-right: 300px;
+    margin-top: -3px;
+    
+}
+
+
+#searchContainer button {
+    padding: 5px 10px;
+    background-color: #06A77D;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+    height: 30;
+    text-align: center;
+    margin-right: -20px;
+    margin-top: -8px;
+    
+}
+body{
+    background: beige;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px;
+    
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+.botao_busca {
+    padding: 5px 10px;
+    background-color: #5F9EA0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: -20;
+    
+}

@@ -1,0 +1,70 @@
+#divBusca{
+  
+    margin-top: 14px;
+    background-color:#E0EEEE;
+    border:solid 2px #5F9EA0;
+    border-radius:10px;
+    margin-left: 100px;
+    width:700px;
+    height:23px;
+  }
+  
+
+  #txtBusca{
+    
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:191px;
+  }
+  .btnBusca{
+    
+    border:none;
+    float: right;
+    margin-top: 0px;
+    height:22.5px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    
+    background:#5F9EA0;
+    
+  }
+  
+#divBuscaCenter{
+  
+    margin-top: 19px;
+    
+    
+    border-radius:10px;
+    margin-left: 100px;
+    width:700px;
+    height:23px;
+  }
+  
+  
+  .btnBusca1{
+    text-align: center;
+    border:none;
+    float: right;
+    margin-top: -10px;
+    height:22.5px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    font-weight:bold;
+  }
+  
+  
+  #divBusca img{
+      
+    
+    float:left;
+      margin-bottom: -104px !important;
+      height: 25px !important;
+      margin-left: 10px;
+      margin-top: -1.5px;
+  
+  
+  }
