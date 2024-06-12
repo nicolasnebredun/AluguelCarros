@@ -8,22 +8,66 @@ body {
   color: beige;
   font-family: JetBrains Mono;
 }
+.subheader-name {
+  display: grid;
+  justify-content: center;
+  color: beige;
+  font-family: JetBrains Mono;
+}
 
 .logo-img {
   display: grid;
-  margin-top: 7px;
+  margin-top: -20px;
   justify-content: center;
 }
 .container {
   display: grid;
   background: beige;
-  width: 1500px;
-  height: 800px;
+  width: 700px;
+  height: 600px;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-top: 28px;
+  margin-top: -25px;
   border-radius: 5% 5% 5% 5%;
+}
+.formulario-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -580px;
+  padding: auto;
+  width: 100%;
+  height: 100%;
+}
+.botao {
+  margin-top: 40px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  justify-content: center;
+  background-color: #06a77d;
+  color: beige;
+  font-family: JetBrains Mono;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.input-form {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  width: 500px;
+  height: 30px;
+  border-radius: 7px;
+  text-align: center;
+  background-color: #06a77d;
+  color: beige;
+  font-size: 20px;
+  font-family: JetBrains Mono;
 }
 
 /*AQUI É A PORRA DA NAV BAR CARAIO NAO MEXE PRA NAO ESTREGAR 

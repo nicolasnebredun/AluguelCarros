@@ -63,10 +63,12 @@ require 'conexao.php';
         <th>CPF</th>
         <th>Telefone</th>
         <th>Dias de ALuguel</th>
+        <th>Data Retirada</th>
+        <th>Data Devolução</th>
         <th>Local Retirada</th>
         <th>Local Devolução</th>
         <th>Horário Retirada</th>
-        <th>Horarário Devolução</th>
+        <th>Horário Devolução</th>
         <th>Carro</th>
         <th>Alterar</th>
       </tr>
@@ -83,8 +85,8 @@ require 'conexao.php';
 
         $plataforma = mysqli_real_escape_string($conexao, $_GET['plataforma']);
         $query = mysqli_real_escape_string($conexao, $_GET['query']);
-        $consulta = "SELECT * FROM aluguel WHERE $plataforma LIKE '%$query%'";
-        $consulta2 = "SELECT * FROM aluguel WHERE $plataforma LIKE '%$query%'";
+        $consulta = "SELECT * FROM alugueis WHERE $plataforma LIKE '%$query%'";
+        $consulta2 = "SELECT * FROM alugueis WHERE $plataforma LIKE '%$query%'";
         $executaConsulta = mysqli_query($conexao, $consulta);
         $executaConsulta2 = mysqli_query($conexao, $consulta2);
 
@@ -96,12 +98,14 @@ require 'conexao.php';
                             <td>{$alugueis['CPF']}</td>
                             <td>{$alugueis['Telefone']}</td>
                             <td>{$alugueis['QDias']}</td>
+                            <td>{$alugueis['DRetirada']}</td>
+                            <td>{$alugueis['DDevolucao']}</td>
                             <td>{$alugueis['LRetirada']}</td>
                             <td>{$alugueis['LDevolucao']}</td>
                             <td>{$alugueis['HRetirada']}</td>
                             <td>{$alugueis['HDevolucao']}</td>
                             <td>{$alugueis['Carro']}</td>
-                            <td><a class='botao' href='update.php?id={$alugueis['ID']}'>Alterar</a></td>
+                            <td><a class='botao' href='update.php?ID={$alugueis['ID']}'>Alterar</a></td>
                         </tr>";
           }
         } elseif (mysqli_num_rows($executaConsulta2) != 1) {
@@ -116,12 +120,14 @@ require 'conexao.php';
                         <td>{$alugueis2['CPF']}</td>
                         <td>{$alugueis2['Telefone']}</td>
                         <td>{$alugueis2['QDias']}</td>
+                        <td>{$alugueis['DRetirada']}</td>
+                        <td>{$alugueis['DDevolucao']}</td>
                         <td>{$alugueis2['LRetirada']}</td>
                         <td>{$alugueis2['LDevolucao']}</td>
                         <td>{$alugueis2['HRetirada']}</td>
                         <td>{$alugueis2['HDevolucao']}</td>
                         <td>{$alugueis2['Carro']}</td>
-                        <td><a class='botao' href='update.php?id={$alugueis2['ID']}'>Alterar</a></td>
+                        <td><a class='botao' href='update.php?ID={$alugueis2['ID']}'>Alterar</a></td>
 
                       </tr>";
           }
