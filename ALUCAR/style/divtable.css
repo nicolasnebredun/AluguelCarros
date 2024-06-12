@@ -24,7 +24,7 @@ table.greenTable {
   }
   table.greenTable tbody td {
     font-size: 13px;
-    font-family: JetBrains Mono;
+    font-family: 'JetBrains Mono', monospace;
   }
   table.greenTable thead {
     background: #06A77D;

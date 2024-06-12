@@ -3,8 +3,9 @@ require 'conexao.php';
 ?>
 <html lang="pt-BR">
 
+
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" href="./style/style.css" />
   <link rel="stylesheet" href="./style/styleguide.css" />
   <link rel="stylesheet" href="./style/divtable.css" />

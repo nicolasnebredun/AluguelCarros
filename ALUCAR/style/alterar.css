@@ -1,0 +1,173 @@
+body {
+  background: #06a77d;
+}
+
+.header-name {
+  display: grid;
+  justify-content: center;
+  color: beige;
+  font-family: JetBrains Mono;
+}
+
+.logo-img {
+  display: grid;
+  margin-top: 7px;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  background: beige;
+  width: 1500px;
+  height: 800px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 28px;
+  border-radius: 5% 5% 5% 5%;
+}
+
+/*AQUI É A PORRA DA NAV BAR CARAIO NAO MEXE PRA NAO ESTREGAR 
+SE NAO TU TA FUDIDO PRA ARRUMAR DEPOIS */
+
+#menu {
+  background: #06a77d;
+  height: 65px;
+  border-radius: 0px;
+}
+#menu ul,
+#menu li {
+  margin: 0 auto;
+  height: 90%;
+  padding: 0;
+  list-style: none;
+}
+#menu ul {
+  width: 95%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+#menu li {
+  display: inline-block;
+  position: relative;
+  margin-top: -1px;
+}
+#menu a {
+  display: inline;
+  line-height: 45px;
+  padding: 0 50px;
+  text-decoration: none;
+  color: beige;
+  font-size: 18px;
+  font-family: JetBrains Mono;
+}
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+  text-align: center;
+}
+#menu li a:hover {
+  color: #0099cc;
+  background: #f2f2f2;
+  margin-top: 10;
+}
+#menu input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  width: 95%;
+  opacity: 0;
+  cursor: pointer;
+}
+#menu label {
+  display: none;
+  line-height: 45px;
+  text-align: center;
+  position: absolute;
+  left: 35px;
+}
+#menu label:before {
+  font-size: 1.6em;
+  color: #ffffff;
+  content: "\2261";
+  margin-left: 20px;
+}
+#menu ul.sub-menus {
+  font-family: JetBrains Mono;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  background: #fffff3;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  margin-right: -40px;
+}
+#menu ul.sub-menus li {
+  display: block;
+  text-align: center;
+  width: 95%;
+  margin-right: -18px;
+}
+#menu ul.sub-menus a {
+  color: #2a6ac0;
+  font-size: 16px;
+  text-align: center;
+  padding: 8px;
+  margin-right: 46px;
+}
+#menu li:hover ul.sub-menus {
+  display: block;
+  text-align: center;
+}
+#menu ul.sub-menus a:hover {
+  background: #f2f2f2;
+  color: #2a6ac0;
+}
+@media screen and (max-width: 800px) {
+  #menu {
+    position: relative;
+  }
+  #menu ul {
+    background: #fffff3;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: auto;
+    display: none;
+    text-align: left;
+  }
+  #menu ul.sub-menus {
+    width: 95%;
+    position: static;
+  }
+  #menu ul.sub-menus a {
+    padding-left: 30px;
+  }
+  #menu li {
+    display: block;
+    float: none;
+    width: auto;
+  }
+  #menu input,
+  #menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  #menu input {
+    z-index: 4;
+  }
+  #menu input:checked + label {
+    color: #ffffff;
+  }
+  #menu input:checked + label:before {
+    content: "\00d7";
+  }
+  #menu input:checked ~ ul {
+    display: block;
+  }
+}
