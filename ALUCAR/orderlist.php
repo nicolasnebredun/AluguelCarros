@@ -83,8 +83,8 @@ require 'conexao.php';
 
         $plataforma = mysqli_real_escape_string($conexao, $_GET['plataforma']);
         $query = mysqli_real_escape_string($conexao, $_GET['query']);
-        $consulta = "SELECT * FROM aluguel WHERE $plataforma LIKE '%$query%'";
-        $consulta2 = "SELECT * FROM aluguel WHERE $plataforma LIKE '%$query%'";
+        $consulta = "SELECT * FROM alugueis WHERE $plataforma LIKE '%$query%'";
+        $consulta2 = "SELECT * FROM alugueis WHERE $plataforma LIKE '%$query%'";
         $executaConsulta = mysqli_query($conexao, $consulta);
         $executaConsulta2 = mysqli_query($conexao, $consulta2);
 
