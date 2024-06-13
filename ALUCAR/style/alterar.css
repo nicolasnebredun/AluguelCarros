@@ -51,6 +51,13 @@ body {
   height: 100%;
   margin-right: -10;
 }
+.teste1 {
+  display: block;
+  padding: auto;
+  justify-content: center;
+  height: 40;
+  width: 200;
+}
 .botao {
   margin-top: 15px;
   align-items: center;
@@ -62,20 +69,20 @@ body {
   width: 200px;
   height: 40px;
   font-size: 20px;
-  margin-right: 40px;
-  margin-left: 40px;
+
+  margin-left: 305px;
 }
 .buttons {
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 .botao-delete {
-  margin-top: 15px;
+  margin-top: -38px;
   align-items: center;
+  margin-right: 305px;
+  display: grid;
   background-color: #ff0202;
   color: beige;
-  margin-right: 40px;
-  margin-left: 40px;
   font-family: JetBrains Mono;
   border-radius: 10px;
   width: 200px;
@@ -99,10 +106,11 @@ body {
 .confirmar {
   display: grid;
   justify-content: center;
+  align-items: center;
   margin-top: -10px;
   color: #003d2d;
   font-family: JetBrains Mono;
-  margin-left: 50px;
+  margin-left: 35px;
 }
 /*AQUI É DO CHECKBOX DE DELETE E ATUALIZAR NAO MEXER CARAIO*/
 /* Genel stil */
@@ -113,7 +121,7 @@ body {
   height: 26.4px;
   margin: 0 auto;
   margin-top: -110px;
-  margin-right: 1166px;
+  margin-right: 1152px;
 }
 
 /* Giriş stil */
