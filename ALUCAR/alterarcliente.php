@@ -16,10 +16,10 @@ require 'conexao.php';
     <?php
     if (isset($_GET['ID'])) {
         $idCliente = $_GET['ID'];
-        $consulta = "SELECT * FROM alugueis where ID ='$idCliente' ";
+        $consulta = "SELECT * FROM cliente where ID ='$idCliente' ";
         $execultaConsulta = mysqli_query($conexao, $consulta);
         if (mysqli_num_rows($execultaConsulta) > 0) {
-            $alugueis = mysqli_fetch_array($execultaConsulta);
+            $cliente = mysqli_fetch_array($execultaConsulta);
 
     ?>
 
@@ -53,8 +53,8 @@ require 'conexao.php';
                 <h1>Atualizar Cliente</h1>
             </div>
             <div>
-                <h1 class=" client-infos"> Nome </h1>
-                <h1 class=" client-infos"> CPF </h1>
+                <h1 class=" client-infos"> Primeiro Nome </h1>
+                <h1 class=" client-infos"> Segundo Nome </h1>
                 <h1 class=" client-infos"> Telefone </h1>
             </div>
             <br>
@@ -62,10 +62,10 @@ require 'conexao.php';
 
             <div>
                 <form class="formulario-edit" action="update.php" method="POST">
-                    <input class="input-form" type="hidden" name="id" value="<?= $alugueis['ID'] ?>">
-                    <input class="input-form" type="text" name="Nome" value="<?= $alugueis['Nome'] ?>" required>
-                    <input class="input-form" type="text" name="CPF" value="<?= $alugueis['CPF'] ?>" required>
-                    <input class="input-form" type="text" name="Telefone" value="<?= $alugueis['Telefone'] ?>" required>
+                    <input class="input-form" type="hidden" name="ident" value="<?= $cliente['ID'] ?>">
+                    <input class="input-form" type="text" name="Nome" value="<?= $cliente['Nome'] ?>" required>
+                    <input class="input-form" type="text" name="Sobrenome" value="<?= $cliente['Sobrenome'] ?>" required>
+                    <input class="input-form" type="text" name="Telefone" value="<?= $cliente['Telefone'] ?>" required>
             </div>
             <div>
                 <h1 class="confirmar"> Pressione para confirmar </h1>
