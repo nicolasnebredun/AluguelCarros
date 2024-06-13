@@ -105,7 +105,7 @@ require 'conexao.php';
                             <td>{$alugueis['HRetirada']}</td>
                             <td>{$alugueis['HDevolucao']}</td>
                             <td>{$alugueis['Carro']}</td>
-                            <td><a class='botao' href='update.php?ID={$alugueis['ID']}'>Alterar</a></td>
+                            <td><a class='botao' href='alterarcliente.php?ID={$alugueis['ID']}'>Alterar</a></td>
                         </tr>";
           }
         } elseif (mysqli_num_rows($executaConsulta2) != 1) {
@@ -127,7 +127,7 @@ require 'conexao.php';
                         <td>{$alugueis2['HRetirada']}</td>
                         <td>{$alugueis2['HDevolucao']}</td>
                         <td>{$alugueis2['Carro']}</td>
-                        <td><a class='botao' href='update.php?ID={$alugueis2['ID']}'>Alterar</a></td>
+                        <td><a class='botao' href='alterarcliente.php?ID={$alugueis2['ID']}'>Alterar</a></td>
 
                       </tr>";
           }

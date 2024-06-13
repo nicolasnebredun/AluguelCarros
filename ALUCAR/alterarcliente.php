@@ -52,6 +52,11 @@ require 'conexao.php';
             <div class="subheader-name">
                 <h1>Atualizar Cliente</h1>
             </div>
+            <div>
+                <h1 class=" client-infos"> Nome </h1>
+                <h1 class=" client-infos"> CPF </h1>
+                <h1 class=" client-infos"> Telefone </h1>
+            </div>
             <br>
             <div class="container"></div>
 
@@ -63,8 +68,20 @@ require 'conexao.php';
                     <input class="input-form" type="text" name="Telefone" value="<?= $alugueis['Telefone'] ?>" required>
             </div>
             <div>
+                <h1 class="confirmar"> Pressione para confirmar </h1>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="botao-delete">Deletar</button>
                 <button type="submit" class="botao">Atualizar</button>
             </div>
+
+
+            <div class="toggle-switch">
+
+                <input class="toggle-input" id="toggle" type="checkbox">
+                <label class="toggle-label" for="toggle"></label>
+            </div>
+
             </form>
 
     <?php

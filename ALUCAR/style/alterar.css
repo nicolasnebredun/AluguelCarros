@@ -15,6 +15,15 @@ body {
   font-family: JetBrains Mono;
 }
 
+.client-infos {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #003d2d;
+  font-family: JetBrains Mono;
+  margin-bottom: 100px;
+}
 .logo-img {
   display: grid;
   margin-top: -20px;
@@ -28,7 +37,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-top: -25px;
+  margin-top: -480px;
   border-radius: 5% 5% 5% 5%;
 }
 .formulario-edit {
@@ -40,16 +49,33 @@ body {
   padding: auto;
   width: 100%;
   height: 100%;
+  margin-right: -10;
 }
 .botao {
-  margin-top: 40px;
-  margin: 0 auto;
+  margin-top: 15px;
   align-items: center;
-  justify-content: center;
   display: grid;
-  justify-content: center;
   background-color: #06a77d;
   color: beige;
+  font-family: JetBrains Mono;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.botao-delete {
+  margin-top: 15px;
+  align-items: center;
+  background-color: #ff0202;
+  color: beige;
+  margin-right: 40px;
+  margin-left: 40px;
   font-family: JetBrains Mono;
   border-radius: 10px;
   width: 200px;
@@ -58,8 +84,8 @@ body {
 }
 
 .input-form {
-  margin-top: 80px;
-  margin-bottom: 40px;
+  margin-top: 70px;
+  margin-bottom: 36px;
   width: 500px;
   height: 30px;
   border-radius: 7px;
@@ -68,6 +94,94 @@ body {
   color: beige;
   font-size: 20px;
   font-family: JetBrains Mono;
+}
+
+.confirmar {
+  display: grid;
+  justify-content: center;
+  margin-top: -10px;
+  color: #003d2d;
+  font-family: JetBrains Mono;
+  margin-left: 50px;
+}
+/*AQUI É DO CHECKBOX DE DELETE E ATUALIZAR NAO MEXER CARAIO*/
+/* Genel stil */
+.toggle-switch {
+  position: relative;
+  justify-content: center;
+  width: 48.4px;
+  height: 26.4px;
+  margin: 0 auto;
+  margin-top: -110px;
+  margin-right: 1166px;
+}
+
+/* Giriş stil */
+.toggle-switch .toggle-input {
+  display: none;
+}
+
+/* Anahtarın stilinin etrafındaki etiketin stil */
+.toggle-switch .toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48.4px;
+  height: 26.4px;
+  background-color: #ff0000;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Anahtarın yuvarlak kısmının stil */
+.toggle-switch .toggle-label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 2px;
+  left: 6px;
+
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+/* Anahtarın etkin hale gelmesindeki stil değişiklikleri */
+.toggle-switch .toggle-input:checked + .toggle-label {
+  background-color: #4caf50;
+}
+
+.toggle-switch .toggle-input:checked + .toggle-label::before {
+  transform: translateX(16px);
+}
+
+/* Light tema */
+.toggle-switch.light .toggle-label {
+  background-color: #bebebe;
+}
+
+.toggle-switch.light .toggle-input:checked + .toggle-label {
+  background-color: #9b9b9b;
+}
+
+.toggle-switch.light .toggle-input:checked + .toggle-label::before {
+  transform: translateX(6px);
+}
+
+/* Dark tema */
+.toggle-switch.dark .toggle-label {
+  background-color: #4b4b4b;
+}
+
+.toggle-switch.dark .toggle-input:checked + .toggle-label {
+  background-color: #717171;
+}
+
+.toggle-switch.dark .toggle-input:checked + .toggle-label::before {
+  transform: translateX(16px);
 }
 
 /*AQUI É A PORRA DA NAV BAR CARAIO NAO MEXE PRA NAO ESTREGAR 
