@@ -1,4 +1,5 @@
 @import url("./styleguide.css");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 * {
 	margin: 0;
@@ -53,7 +54,7 @@
 	text-decoration: none;
 	color: #FFFFFF;
 	font-size: 18px;
-	font-family: JetBrains Mono;
+	font-family: "JetBrains Mono", monospace;
 
 }
 
@@ -96,7 +97,7 @@
 
 #menu ul.sub-menus {
 
-	font-family: JetBrains Mono;
+	font-family: "JetBrains Mono", monospace;
 	height: auto;
 	overflow: hidden;
 	width: 100%;
@@ -151,6 +152,7 @@
 		height: auto;
 		display: none;
 		text-align: left;
+		font-family: "JetBrains Mono", monospace;
 	}
 
 	#menu ul.sub-menus {
@@ -196,7 +198,7 @@
 header {
 	background-image: url("../assets/Group\ 1.png");
 	background-size: cover;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: JetBrains Mono;
 	padding: 20px 0;
 	text-align: center;
 	height: 550px;
@@ -218,7 +220,7 @@ main {
 }
 
 .welcome-section h1 {
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: JetBrains Mono;
 	color: #008000;
 	font-size: 24px;
 	margin-bottom: 20px;
