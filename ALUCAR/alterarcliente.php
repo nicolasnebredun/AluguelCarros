@@ -61,14 +61,11 @@ require 'conexao.php';
             <div class="container"></div>
 
             <div>
-                <form id="form" class="formulario-edit" action="update.php" method="POST">
-                    <input class="input-form" type="hidden" name="ident" value="<?= $cliente['ID'] ?>">
+                <form id="form" class="formulario-edit" action="update.php?ID=<?= $idCliente ?>" method="POST">
+                    <input class="input-form" type="hidden" name="ID" value="<?= $cliente['ID'] ?>">
                     <input class="input-form" type="text" name="Nome" value="<?= $cliente['Nome'] ?>" required>
                     <input class="input-form" type="text" name="Sobrenome" value="<?= $cliente['Sobrenome'] ?>" required>
                     <input class="input-form" type="text" name="Telefone" value="<?= $cliente['Telefone'] ?>" required>
-            </div>
-            <div>
-                <h1 class="confirmar"> Marque Para Confirmar </h1>
             </div>
             <div class="buttons">
                 <button type="text" class="botao">Atualizar</button>
@@ -78,10 +75,7 @@ require 'conexao.php';
                 <a href="delete.php?ID=<?= $cliente['ID'] ?>"> <button type="submit" class="botao-delete">Deletar</button>
                 </a>
             </div>
-            <div class=" toggle-switch">
-                <input class="toggle-input" id="toggle" type="checkbox" required>
-                <label class="toggle-label" for="toggle"></label>
-            </div>
+
 
 
 

@@ -6,21 +6,22 @@ require 'conexao.php';
 <html lang="en">
 
 <?php
-$Id = $_POST['ID'];
-$Nome = $_POST['Nome'];
-$Sobrenome = $_POST['Sobrenome'];
-$Telefone = $_POST['Telefone'];
-$alteracao = "UPDATE cliente SET Nome='$Nome', Sobrenome='$Sobrenome',
-Telefone='$Telefone' WHERE ID ='$Id' ";
-$execultaAlteracao = mysqli_query($conexao, $alteracao);
-if ($execultaAlteracao) {
+$client_id = $_GET['ID'];
 
+$exclusao_alugueis = "DELETE from alugueis WHERE cliente_id ='$client_id'";
+$exclusao_client = "DELETE from cliente WHERE ID ='$client_id'";
+
+$execultaExclusao_alugueis = mysqli_query($conexao, $exclusao_alugueis);
+$execultaExclusao_client = mysqli_query($conexao, $exclusao_client);
+
+if ($execultaExclusao_alugueis && $execultaExclusao_client) {
     header("Refresh: 5; url=orderlist.php");
 } else {
 
     header("Refresh: 5; url=FALHA.php");
 }
 ?>
+
 
 <head>
     <meta charset="UTF-8">
@@ -34,17 +35,15 @@ if ($execultaAlteracao) {
     <div id="myProgress">
         <div id="myBar"></div>
     </div>
-
     <script>
         setTimeout(function() {
-            if (confirm("Você Alterou o Registro!")) {
+            if (confirm("Você Deletou o registro!")) {
                 txt = "Você Deletou o registro!";
             } else {
-                txt = "O Cliente não foi Atualizado, Algo de Errado Aconteceu.";
+                txt = "O Cliente não foi Deletado, Algo de Errado Aconteceu.";
             }
         }, 4000);
     </script>
-
 </body>
 
 </html>
