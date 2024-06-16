@@ -6,7 +6,7 @@ require 'conexao.php';
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" href="./style/style.css" />
+  <!-- <link rel="stylesheet" href="./style/style.css" /> -->
   <link rel="stylesheet" href="./style/styleguide.css" />
   <link rel="stylesheet" href="./style/divtable.css" />
   <link rel="stylesheet" href="./style/busca.css" />
@@ -57,7 +57,7 @@ require 'conexao.php';
             <div class="texts">
               <h2 class="car-title">Fiat uno - 1.6</h2>
               <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <button class="car-button">Alugar este carro</button>
+              <button class="car-button" onclick="openModal()">Alugar este carro</button>
             </div>
           </div>
           <div class="car-box">
@@ -67,7 +67,7 @@ require 'conexao.php';
             <div class="texts">
               <h2 class="car-title">Strada - 2.0</h2>
               <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <button class="car-button">Alugar este carro</button>
+              <button class="car-button" onclick="openModal()">Alugar este carro</button>
             </div>
           </div>
           <div class="car-box">
@@ -77,7 +77,7 @@ require 'conexao.php';
             <div class="texts">
               <h2 class="car-title">Fiat uno - 1.6</h2>
               <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <button class="car-button">Alugar este carro</button>
+              <button class="car-button" onclick="openModal()">Alugar este carro</button>
             </div>
           </div>
           <div class="car-box">
@@ -87,7 +87,7 @@ require 'conexao.php';
             <div class="texts">
               <h2 class="car-title">Fiat uno - 1.6</h2>
               <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <button class="car-button">Alugar este carro</button>
+              <button class="car-button" onclick="openModal()">Alugar este carro</button>
             </div>
           </div>
           <div class="car-box">
@@ -97,7 +97,7 @@ require 'conexao.php';
             <div class="texts">
               <h2 class="car-title">Strada - 2.0</h2>
               <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <button class="car-button">Alugar este carro</button>
+              <button class="car-button" onclick="openModal()">Alugar este carro</button>
             </div>
           </div>
           <div class="car-box">
@@ -158,16 +158,6 @@ require 'conexao.php';
           echo '<div class="campo">';
           echo '<label for="hDevolucao">Hora Devolução:</label>';
           echo '<input type="time" id="hDevolucao" name="hDevolucao" required>';
-          echo '</div>';
-          echo '<div class="campo">';
-          echo '<label for="carro">Carro Escolhido:</label>';
-          echo '<select id="carro" name="carro" required>';
-          echo '<option value="">Selecione...</option>';
-          echo '<option value="Fiat Argo">Fiat Argo</option>';
-          echo '<option value="Chevrolet Onix Plus">Chevrolet Onix Plus</option>';
-          echo '<option value="Volkswagen Nivus">Volkswagen Nivus</option>';
-          echo '<option value="Jeep Renegade">Jeep Renegade</option>';
-          echo '</select>';
           echo '</div>';
           echo '<button class="btnsOK" type="submit" onclick="closeModal()">Alugar</button>';
           echo '</form>';

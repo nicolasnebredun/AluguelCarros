@@ -210,52 +210,65 @@ header .logo img {
 	width: 150px;
 }
 
-main {
-	padding: 20px;
-	text-align: center;
+.custom-title {
+    margin: 0;
+		font-size: 24px;
+		color: #333;
+		text-align: center;
+		font-family: JetBrains Mono;
+		margin-bottom: 20px;
+		margin-top: 30px;
 }
 
-.welcome-section {
-	margin-bottom: 20px;
+.custom-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto;
 }
 
-.welcome-section h1 {
-	font-family: JetBrains Mono;
-	color: #008000;
-	font-size: 24px;
-	margin-bottom: 20px;
+.custom-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 25%;
+    min-width: 300px;
+    transition: transform 0.2s;
 }
 
-.info-section {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+.custom-card:hover {
+    transform: translateY(-10px);
 }
 
-.info-box {
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.1);
-	padding: 20px;
-	margin: 10px;
-	width: 30%;
-	min-width: 250px;
-	text-align: left;
+.custom-card-title {
+    color: #4CAF50;
 }
 
-.info-box h2 {
-	color: #008000;
-	margin-bottom: 10px;
+.custom-content {
+    background-color: #e0e0e0;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 
-.info-box img {
-	width: 100%;
-	height: auto;
-	border-radius: 10px;
-	margin-bottom: 10px;
+.custom-text {
+    margin: 10px 0;
+    color: #333;
 }
 
-.info-box p {
-	color: #333;
-	font-size: 14px;
+.custom-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #45a049;
 }

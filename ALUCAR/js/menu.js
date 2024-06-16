@@ -10,4 +10,8 @@ function updatemenu() {
   function refreshPage() {
     location.reload(); 
 }
+
+  function redirectionPage() {
+    window.location.href = "./carrosParaAlugar.php";
+}
   
