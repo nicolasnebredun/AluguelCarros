@@ -12,7 +12,7 @@ require 'conexao.php';
   <link rel="stylesheet" href="./style/busca.css" />
   <link rel="stylesheet" href="./style/teste.css" />
   <link rel="stylesheet" href="./style/buscaclass.css" />
-  <title>Listagem de Clientes</title>
+  <title>Listagem de Aluguel</title>
 </head>
 
 <body>

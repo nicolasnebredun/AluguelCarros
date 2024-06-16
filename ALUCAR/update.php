@@ -15,7 +15,7 @@ Telefone='$Telefone' WHERE ID ='$Id' ";
 $execultaAlteracao = mysqli_query($conexao, $alteracao);
 if ($execultaAlteracao) {
 
-    header("Refresh: 5; url=orderlist.php");
+    header("Refresh: 5; url=listacliente.php");
 } else {
 
     header("Refresh: 5; url=FALHA.php");

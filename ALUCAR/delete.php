@@ -15,7 +15,7 @@ $execultaExclusao_alugueis = mysqli_query($conexao, $exclusao_alugueis);
 $execultaExclusao_client = mysqli_query($conexao, $exclusao_client);
 
 if ($execultaExclusao_alugueis && $execultaExclusao_client) {
-    header("Refresh: 5; url=orderlist.php");
+    header("Refresh: 5; url=listacliente.php");
 } else {
 
     header("Refresh: 5; url=FALHA.php");
