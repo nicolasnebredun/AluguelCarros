@@ -106,7 +106,7 @@ require 'conexao.php';
                             <td>{$alugueis['HRetirada']}</td>
                             <td>{$alugueis['HDevolucao']}</td>
                             <td>{$alugueis['Carro']}</td>
-                            <td><a class='botao' href='alterarcliente.php?ID={$alugueis['ID']}'>Alterar</a></td>
+                            <td><a class='botao' href='deletealuguel.php?ID={$alugueis['id']}'>Deletar</a></td>
                         </tr>";
           }
         } elseif (mysqli_num_rows($executaConsulta) <= 0) {
