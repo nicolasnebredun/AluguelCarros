@@ -6,21 +6,21 @@ require 'conexao.php';
 <html lang="en">
 
 <?php
-$Id = $_POST['ID'];
-$Nome = $_POST['Nome'];
-$Sobrenome = $_POST['Sobrenome'];
-$Telefone = $_POST['Telefone'];
-$alteracao = "UPDATE cliente SET Nome='$Nome', Sobrenome='$Sobrenome',
-Telefone='$Telefone' WHERE ID ='$Id' ";
-$execultaAlteracao = mysqli_query($conexao, $alteracao);
-if ($execultaAlteracao) {
+$aluguel_id = $_GET['ID'];
 
-    header("Refresh: 5; url=listacliente.php");
+$exclusao_alugueis = "DELETE from alugueis WHERE id ='$aluguel_id'";;
+
+$execultaExclusao_alugueis = mysqli_query($conexao, $exclusao_alugueis);
+
+
+if ($execultaExclusao_alugueis) {
+    header("Refresh: 5; url=listaaluguel.php");
 } else {
 
     header("Refresh: 5; url=FALHA.php");
 }
 ?>
+
 
 <head>
     <meta charset="UTF-8">
@@ -34,17 +34,15 @@ if ($execultaAlteracao) {
     <div id="myProgress">
         <div id="myBar"></div>
     </div>
-
     <script>
         setTimeout(function() {
-            if (confirm("Você Alterou o Registro!")) {
+            if (confirm("Você Deletou o registro!")) {
                 txt = "Você Deletou o registro!";
             } else {
-                txt = "O Cliente não foi Atualizado, Algo de Errado Aconteceu.";
+                txt = "O Cliente não foi Deletado, Algo de Errado Aconteceu.";
             }
         }, 4000);
     </script>
-
 </body>
 
 </html>

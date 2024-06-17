@@ -12,7 +12,7 @@ require 'conexao.php';
   <link rel="stylesheet" href="./style/busca.css" />
   <link rel="stylesheet" href="./style/teste.css" />
   <link rel="stylesheet" href="./style/buscaclass.css" />
-  <title>Listagem de Clientes</title>
+  <title>Listagem de Aluguel</title>
 </head>
 
 <body>
@@ -43,9 +43,9 @@ require 'conexao.php';
   </nav>
   <div id="searchContainer">
     <form method="GET" action="">
-      <select class="filtro" name="plataforma" id="plataforma" required>
+      <select class="filtro" name="filtro" id="filtro" required>
         <option value="">Selecione o Tipo de Procura</option>
-        <option value="ID">ID</option>
+        <option value="cliente_id">ID</option>
         <option value="Nome">Nome</option>
         <option value="CPF">CPF</option>
       </select>
@@ -76,19 +76,20 @@ require 'conexao.php';
     <tbody>
       <?php
 
-      if (isset($_GET['plataforma']) && isset($_GET['query']) && !empty($_GET['plataforma']) && !empty($_GET['query'])) {
+      if (isset($_GET['filtro']) && isset($_GET['query']) && !empty($_GET['filtro']) && !empty($_GET['query'])) {
         $conexao = mysqli_connect("localhost", "root", "root", "alucar");
 
         if (!$conexao) {
           die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
         }
 
-        $plataforma = mysqli_real_escape_string($conexao, $_GET['plataforma']);
+        $filtro = mysqli_real_escape_string($conexao, $_GET['filtro']);
         $query = mysqli_real_escape_string($conexao, $_GET['query']);
-        $consulta = "SELECT * FROM alugueis WHERE $plataforma LIKE '%$query%'";
-        $consulta2 = "SELECT * FROM alugueis WHERE $plataforma LIKE '%$query%'";
+        $consulta2 = "SELECT * FROM alugueis WHERE $filtro LIKE '%$query%'";
+        $consulta = "SELECT alugueis.*,cliente.ID, cliente.Nome, cliente.CPF, cliente.Telefone 
+                            FROM alugueis  INNER JOIN cliente ON alugueis.cliente_id = cliente.ID WHERE $filtro LIKE '%$query%'";
         $executaConsulta = mysqli_query($conexao, $consulta);
-        $executaConsulta2 = mysqli_query($conexao, $consulta2);
+
 
         if (mysqli_num_rows($executaConsulta) > 0) {
           foreach ($executaConsulta as $alugueis) {
@@ -105,32 +106,13 @@ require 'conexao.php';
                             <td>{$alugueis['HRetirada']}</td>
                             <td>{$alugueis['HDevolucao']}</td>
                             <td>{$alugueis['Carro']}</td>
-                            <td><a class='botao' href='update.php?ID={$alugueis['ID']}'>Alterar</a></td>
+                            <td><a class='botao' href='deletealuguel.php?ID={$alugueis['id']}'>Deletar</a></td>
                         </tr>";
           }
-        } elseif (mysqli_num_rows($executaConsulta2) != 1) {
+        } elseif (mysqli_num_rows($executaConsulta) <= 0) {
 
           // Consulta $executaConsulta retornou zero linhas, mostrando todos os dados do banco
           echo "<tr><td colspan='65'>Nenhum resultado encontrado, Tente novamente realizar a Pesquisa!</td></tr>";
-
-          foreach ($executaConsulta2 as $alugueis2) {
-            echo "<tr>
-                        <td>{$alugueis2['ID']}</td>
-                        <td>{$alugueis2['Nome']}</td>
-                        <td>{$alugueis2['CPF']}</td>
-                        <td>{$alugueis2['Telefone']}</td>
-                        <td>{$alugueis2['QDias']}</td>
-                        <td>{$alugueis['DRetirada']}</td>
-                        <td>{$alugueis['DDevolucao']}</td>
-                        <td>{$alugueis2['LRetirada']}</td>
-                        <td>{$alugueis2['LDevolucao']}</td>
-                        <td>{$alugueis2['HRetirada']}</td>
-                        <td>{$alugueis2['HDevolucao']}</td>
-                        <td>{$alugueis2['Carro']}</td>
-                        <td><a class='botao' href='update.php?ID={$alugueis2['ID']}'>Alterar</a></td>
-
-                      </tr>";
-          }
         }
         mysqli_close($conexao);
       }
