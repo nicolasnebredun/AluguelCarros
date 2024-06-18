@@ -124,49 +124,37 @@ require 'conexao.php';
           <div class="modal-container">
             <div class="modal">
               <h2 class="modal-title">Preencha o formulário para alugar!</h2>
-              <form class="formulario-edit" action="update.php" method="POST">
+              <form class="formulario-edit" action="alugarCarroForm.php" method="POST">
                 <div class="campo">
-                  <input class="input-form" type="hidden" name="id" value="<?= $alugueis['ID'] ?>">
+                  <input class="input-form" type="hidden" name="ID" value="<?=$idCliente?>">
                 </div>
                 <div class="campo">
-                  <label for="nome">Nome Completo:</label>
-                  <input type="text" id="nome" name="nome" value="<?= $alugueis['Nome'] ?>" required>
+                  <label for="DRetirada">Data Retirada:</label>
+                  <input type="date" id="DRetirada" name="DRetirada" required>
                 </div>
                 <div class="campo">
-                  <label for="cpf">CPF:</label>
-                  <input type="text" id="cpf" name="cpf" value="<?= $alugueis['CPF'] ?>" required>
+                  <label for="DDevolucao">Data Devolução:</label>
+                  <input type="date" id="DDevolucao" name="DDevolucao" required>
                 </div>
                 <div class="campo">
-                  <label for="telefone">Telefone:</label>
-                  <input type="tel" id="telefone" name="telefone" value="<?= $alugueis['Telefone'] ?>" required>
+                  <label for="LRetirada">Local Retirada:</label>
+                  <input type="text" id="LRetirada" name="LRetirada" required>
                 </div>
                 <div class="campo">
-                  <label for="qDias">Dias Alugados:</label>
-                  <input type="number" id="qDias" name="qDias" min="1" value="<?= $alugueis['qDias'] ?>" required>
+                  <label for="LDevolucao">Local Devolução:</label>
+                  <input type="text" id="LDevolucao" name="LDevolucao" required>
                 </div>
                 <div class="campo">
-                  <label for="dRetirada">Data Retirada:</label>
-                  <input type="date" id="dRetirada" name="dRetirada" value="<?= $alugueis['dRetirada'] ?>" required>
+                  <label for="HRetirada">Hora Retirada:</label>
+                  <input type="time" id="HRetirada" name="HRetirada" required>
                 </div>
                 <div class="campo">
-                  <label for="dDevolucao">Data Devolução:</label>
-                  <input type="date" id="dDevolucao" name="dDevolucao" value="<?= $alugueis['dDevolucao'] ?>" required>
+                  <label for="HDevolucao">Hora Devolução:</label>
+                  <input type="time" id="HDevolucao" name="HDevolucao" required>
                 </div>
                 <div class="campo">
-                  <label for="lRetirada">Local Retirada:</label>
-                  <input type="text" id="lRetirada" name="lRetirada" value="<?= $alugueis['lRetirada'] ?>" required>
-                </div>
-                <div class="campo">
-                  <label for="lDevolucao">Local Devolução:</label>
-                  <input type="text" id="lDevolucao" name="lDevolucao" value="<?= $alugueis['lDevolucao'] ?>" required>
-                </div>
-                <div class="campo">
-                  <label for="hRetirada">Hora Retirada:</label>
-                  <input type="time" id="hRetirada" name="hRetirada" value="<?= $alugueis['hRetirada'] ?>" required>
-                </div>
-                <div class="campo">
-                  <label for="hDevolucao">Hora Devolução:</label>
-                  <input type="time" id="hDevolucao" name="hDevolucao" value="<?= $alugueis['hDevolucao'] ?>" required>
+                  <label for="Carro">Carro:</label>
+                  <input type="text" id="Carro" name="Carro" required>
                 </div>
                 <button class="btnsOK" type="submit" onclick="closeModal()">Alugar</button>
             </div>
