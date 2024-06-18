@@ -1,0 +1,6 @@
+INSERT INTO cliente (Nome, Sobrenome, CPF, Telefone)
+VALUES ('Joao', 'Silva', '12345678900', '11987654321');
+
+
+INSERT INTO alugueis (cliente_id, QDias, DRetirada, DDevolucao, LRetirada, LDevolucao, HRetirada, HDevolucao, Carro)
+VALUES (7, 5, '2024-06-16', '2024-06-21', 'Mamore', 'Mamoross', '09:00:00', '18:00:00', 'Gol');

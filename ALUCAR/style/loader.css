@@ -1,0 +1,69 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 350px;
+  color: #003d2d;
+  font-family: JetBrains Mono;
+  margin-bottom: 100px;
+  animation: bit 0.6s alternate infinite;
+}
+
+#myProgress {
+  width: 200px;
+  max-width: 200px;
+  background: #f4f4f4;
+  box-shadow: inset -1px 1px 2px rgba(200, 200, 200, 0.2),
+    inset 1px -1px 2px rgba(200, 200, 200, 0.2),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.9),
+    inset 1px 1px 3px rgba(200, 200, 200, 0.9);
+  border-radius: 28px;
+  overflow: hidden;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: -90px;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background: rgba(0, 209, 0, 0.35);
+  border-radius: 28px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  transition: 0.5s;
+  animation: loading82341 5s ease infinite;
+  justify-content: center;
+}
+@keyframes bit {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loading82341 {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 10%;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  60% {
+    width: 60%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
