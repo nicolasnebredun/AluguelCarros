@@ -9,31 +9,41 @@ require 'conexao.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style/loader2.css">
+    <link rel="stylesheet" href="style/loader.css">
 </head>
 
-<body>
-    <?php
-
+<?php
     $CPF1 = $_POST['CPF'];
     $consulta = "SELECT ID FROM cliente WHERE CPF ='$CPF1' ";
     $execultaConsulta1 = mysqli_query($conexao, $consulta);
-    $idConsulta = mysqli_fetch_row($execultaConsulta1)[0];
-    $execultaConsulta = mysqli_query($conexao, $consulta);
+    $resultado = mysqli_fetch_array($execultaConsulta1);
 
-    if (mysqli_num_rows($execultaConsulta) > 0) {
-        header("Refresh: 3; url=carrosParaAlugar.php?ID=" . $idConsulta);
+    if ($resultado) {
+        $idConsulta = $resultado['ID'];
+        if (mysqli_num_rows($execultaConsulta1) > 0) {
+            header("Refresh: 0; url=carrosParaAlugar.php?ID=" . $idConsulta);
+            exit(); // Termina o script após o redirecionamento
+        } else {
+            echo '<script>
+                setTimeout(function() {
+                    alert("Cadastro não Localizado, Algo de Errado Aconteceu.");
+                    window.location.href = "login.php";
+                }, 4000);
+            </script>';
+        }
     } else {
-        header("Refresh: 1; url=login.php");
+        echo '<script>
+            setTimeout(function() {
+                alert("Cadastro não Localizado, Algo de Errado Aconteceu.");
+                window.location.href = "login.php";
+            }, 4000);
+        </script>';
     }
+?>
 
-    ?>
-    <div class="loader">
-        <label>Please wait...</label>
-        <div class="loading"></div>
+<body>
+    <div class="loader"> Verificando...</div>
+    <div id="myProgress">
+        <div id="myBar"></div>
     </div>
-
-
-
-
 </body>
