@@ -65,7 +65,7 @@ require 'conexao.php';
                 </div>
                 <div class="texts">
                   <h2 class="car-title">Fiat uno - 1.6</h2>
-                  <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p class="car-description">O Fiat Uno 1.6 é um carro compacto e versátil, ideal para a condução urbana. Com um motor de 1.6 litros, oferece um equilíbrio entre desempenho e economia de combustível. Seu design simples e funcional faz dele uma escolha prática para o dia a dia.</p>
                   <button class="car-button" onclick="openModal()">Alugar este carro</button>
                 </div>
               </div>
@@ -75,37 +75,37 @@ require 'conexao.php';
                 </div>
                 <div class="texts">
                   <h2 class="car-title">Strada - 2.0</h2>
-                  <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p class="car-description">A Strada 2.0 é uma picape robusta e confiável, perfeita para quem precisa de um veículo que suporte cargas pesadas. Equipado com um motor de 2.0 litros, oferece potência e durabilidade, sendo uma ótima opção para trabalhos em terrenos variados.</p>
                   <button class="car-button" onclick="openModal()">Alugar este carro</button>
                 </div>
               </div>
               <div class="car-box">
                 <div class="carImages">
-                  <img src="./assets/Rectangle 5-2.png" alt="Fiat uno - 1.6">
+                  <img src="./assets/ford-fiesta-00.png" alt="Ford Fiesta - 1.6">
                 </div>
                 <div class="texts">
-                  <h2 class="car-title">Fiat uno - 1.6</h2>
-                  <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <h2 class="car-title">Ford Fiesta - 1.6</h2>
+                  <p class="car-description">O Ford Fiesta 1.6 é um hatchback popular conhecido por sua dirigibilidade ágil e eficiente. Com um motor de 1.6 litros, proporciona uma condução dinâmica e confortável, sendo ideal tanto para a cidade quanto para viagens mais longas.</p>
                   <button class="car-button" onclick="openModal()">Alugar este carro</button>
                 </div>
               </div>
               <div class="car-box">
                 <div class="carImages">
-                  <img src="./assets/Fiat-Uno-16-mpi.png" alt="Fiat uno - 1.6">
+                  <img src="./assets/ford-ka.png" alt="Ford KA">
                 </div>
                 <div class="texts">
-                  <h2 class="car-title">Fiat uno - 1.6</h2>
-                  <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <h2 class="car-title">Ford KA</h2>
+                  <p class="car-description">O Ford KA é um carro compacto com design moderno e consumo eficiente de combustível. É conhecido por sua facilidade de manobra e praticidade, sendo uma excelente escolha para quem procura um veículo econômico e de fácil manutenção.</p>
                   <button class="car-button" onclick="openModal()">Alugar este carro</button>
                 </div>
               </div>
               <div class="car-box">
                 <div class="carImages">
-                  <img src="./assets/fiat-strada-2021-cabine-simples.png" alt="Strada - 2.0">
+                  <img src="./assets/hyundai-veloster-2011-2018-1665464665.2093709.png" alt="Veloster - 1.6">
                 </div>
                 <div class="texts">
-                  <h2 class="car-title">Strada - 2.0</h2>
-                  <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <h2 class="car-title">Veloster - 1.6</h2>
+                  <p class="car-description">O Veloster 1.6 é um carro esportivo com um design inovador de três portas. Equipado com um motor de 1.6 litros, combina estilo e desempenho, oferecendo uma experiência de condução emocionante e diferenciada.</p>
                   <button class="car-button" onclick="openModal()">Alugar este carro</button>
                 </div>
               </div>
@@ -115,7 +115,7 @@ require 'conexao.php';
                 </div>
                 <div class="texts">
                   <h2 class="car-title">Fiat Argo - 1.0</h2>
-                  <p class="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p class="car-description">O Fiat Argo 1.0 é um hatchback moderno e estiloso, com um motor de 1.0 litro que equilibra economia e desempenho. É ideal para quem busca um carro compacto com tecnologia avançada e conforto, perfeito para o dia a dia nas cidades.</p>
                   <button class="car-button" onclick="openModal()">Alugar este carro</button>
                 </div>
               </div>
@@ -126,7 +126,7 @@ require 'conexao.php';
               <h2 class="modal-title">Preencha o formulário para alugar!</h2>
               <form class="formulario-edit" action="alugarCarroForm.php" method="POST">
                 <div class="campo">
-                  <input class="input-form" type="hidden" name="ID" value="<?=$idCliente?>">
+                  <input class="input-form" type="hidden" name="ID" value="<?= $idCliente ?>">
                 </div>
                 <div class="campo">
                   <label for="DRetirada">Data Retirada:</label>
@@ -154,7 +154,15 @@ require 'conexao.php';
                 </div>
                 <div class="campo">
                   <label for="Carro">Carro:</label>
-                  <input type="text" id="Carro" name="Carro" required>
+                  <select id="Carro" name="Carro" required>
+                    <option value="">Selecione um carro</option>
+                    <option value="Strada">Strada</option>
+                    <option value="Uno">Uno</option>
+                    <option value="Argo">Argo</option>
+                    <option value="Fiesta">Fiesta</option>
+                    <option value="Celta">Celta</option>
+                    <option value="Ka">Ka</option>
+                  </select>
                 </div>
                 <button class="btnsOK" type="submit" onclick="closeModal()">Alugar</button>
             </div>

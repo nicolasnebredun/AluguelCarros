@@ -48,6 +48,12 @@ require 'conexao.php';
                 <option value="ID">ID</option>
                 <option value="Nome">Nome</option>
                 <option value="CPF">CPF</option>
+                <!-- <option value="Strada">Strada</option>
+                <option value="Uno">Uno</option>
+                <option value="Argo">Argo</option>
+                <option value="Ka">Ka</option>
+                <option value="Fiesta">Fiesta</option>
+                <option value="Celta">Gol</option> -->
             </select>
             <input type="text" id="query" name="query" placeholder="Digite o texto para buscar" required>
             <button type="submit" class="botao_busca">Buscar</button>

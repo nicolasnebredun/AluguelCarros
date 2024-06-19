@@ -45,9 +45,10 @@ require 'conexao.php';
     <form method="GET" action="">
       <select class="filtro" name="filtro" id="filtro" required>
         <option value="">Selecione o Tipo de Procura</option>
-        <option value="cliente_id">ID</option>
+        <option value="ID">ID</option>
         <option value="Nome">Nome</option>
         <option value="CPF">CPF</option>
+        <option value="Carro">Carro</option>
       </select>
       <input type="text" id="query" name="query" placeholder="Digite o texto para buscar" required>
       <button type="submit" class="botao_busca">Buscar</button>
